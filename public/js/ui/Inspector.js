@@ -72,9 +72,25 @@ export class Inspector {
   }
 
   conventionNote(model) {
-    if (model === 'cdm') return 'Classes: singular UpperCamelCase nouns. Attributes: singular lowerCamelCase nouns. Associations: unique 3rd-person verbs in lowerCamelCase (e.g. lives, isLocated). No keys in the CDM.';
-    if (model === 'ldm') return 'Names are transposed from the CDM. Keys: pk_, fk_<referredTable>_<verb>[_<role>], pkfk_ for association tables. Arrows point from the foreign key to the primary key.';
-    return 'Tables and columns follow the LDM. Constraints: fkc_Source_verb_Target. Indexes: idx_<type>_<column>. Views, procedures, functions and triggers use vw_, sp_, fn_ and tr_.';
+    const convention = {
+      cdm: [
+        "Classes: singular UpperCamelCase nouns.", 
+        "Attributes: singular lowerCamelCase nouns.",
+        "Associations: unique 3rd-person verbs in lowerCamelCase (e.g. lives, isLocated).",
+        "No keys in the CDM."
+      ],
+      ldm: [
+        "Names are transposed from the CDM. Keys: pk_, fk_<referredTable>_<verb>[_<role>], pkfk_ for association tables.",
+        "Arrows point from the foreign key to the primary key."
+      ],
+      pdm: [
+        "Tables and columns follow the LDM. Constraints: fkc_Source_verb_Target.",
+        "Indexes: idx_<type>_<column>.",
+        "Views, procedures, functions and triggers use vw_, sp_, fn_ and tr_."
+      ]
+    };
+    const text = '<ul><li>' + convention[model].join(' </li><li>') + '</li></ul>';
+    return new DOMParser().parseFromString(text, 'text/html').body.textContent;
   }
 
   // ---------- multi-selection ----------

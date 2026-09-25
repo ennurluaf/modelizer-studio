@@ -1,0 +1,2237 @@
+{
+  "format": "modelizer-document",
+  "version": 1,
+  "meta": {
+    "name": "ProTraining360",
+    "language": "en",
+    "createdAt": "2026-09-24T10:36:50.052Z",
+    "updatedAt": "2026-09-25T08:36:53.587Z"
+  },
+  "layout": {
+    "shared": {
+      "role": {
+        "x": 600,
+        "y": 180
+      },
+      "asc_holds": {
+        "x": 380,
+        "y": 300
+      },
+      "refreshToken": {
+        "x": 320,
+        "y": 440
+      },
+      "appUser": {
+        "x": 600,
+        "y": 400
+      },
+      "asc_joins": {
+        "x": 800,
+        "y": 240
+      },
+      "club": {
+        "x": 1000,
+        "y": 260
+      },
+      "asc_registers": {
+        "x": 800,
+        "y": 580
+      },
+      "trainingSession": {
+        "x": 1000,
+        "y": 440
+      },
+      "infrastructure": {
+        "x": 1380,
+        "y": 260
+      },
+      "equipment": {
+        "x": 1360,
+        "y": 580
+      },
+      "asc_requires": {
+        "x": 1160,
+        "y": 600
+      },
+      "sport": {
+        "x": 1380,
+        "y": 480
+      },
+      "asc_suits": {
+        "x": 1800,
+        "y": 200
+      }
+    },
+    "pdm": {
+      "appUser": {
+        "x": 420,
+        "y": 240
+      },
+      "role": {
+        "x": 60,
+        "y": 60
+      },
+      "refreshToken": {
+        "x": 60,
+        "y": 520
+      },
+      "club": {
+        "x": 1080,
+        "y": 60
+      },
+      "sport": {
+        "x": 1760,
+        "y": 460
+      },
+      "infrastructure": {
+        "x": 1480,
+        "y": 200
+      },
+      "trainingSession": {
+        "x": 1000,
+        "y": 460
+      },
+      "equipment": {
+        "x": 1480,
+        "y": 720
+      },
+      "asc_holds": {
+        "x": 60,
+        "y": 300
+      },
+      "asc_joins": {
+        "x": 760,
+        "y": 60
+      },
+      "asc_registers": {
+        "x": 560,
+        "y": 640
+      },
+      "asc_requires": {
+        "x": 1180,
+        "y": 800
+      },
+      "asc_suits": {
+        "x": 1800,
+        "y": 200
+      }
+    }
+  },
+  "cdm": {
+    "classes": [
+      {
+        "id": "appUser",
+        "name": "AppUser",
+        "attributes": [
+          {
+            "id": "att_s1",
+            "name": "email",
+            "identifier": false,
+            "unique": true
+          },
+          {
+            "id": "att_s2",
+            "name": "passwordHash",
+            "identifier": false,
+            "unique": false
+          },
+          {
+            "id": "att_s3",
+            "name": "firstName",
+            "identifier": false,
+            "unique": false
+          },
+          {
+            "id": "att_s4",
+            "name": "lastName",
+            "identifier": false,
+            "unique": false
+          },
+          {
+            "id": "att_s5",
+            "name": "phone",
+            "identifier": false,
+            "unique": false
+          },
+          {
+            "id": "att_s6",
+            "name": "birthDate",
+            "identifier": false,
+            "unique": false
+          },
+          {
+            "id": "att_s7",
+            "name": "isActive",
+            "identifier": false,
+            "unique": false
+          },
+          {
+            "id": "att_s8",
+            "name": "createdAt",
+            "identifier": false,
+            "unique": false
+          }
+        ]
+      },
+      {
+        "id": "role",
+        "name": "Role",
+        "attributes": [
+          {
+            "id": "att_s9",
+            "name": "code",
+            "identifier": true,
+            "unique": false
+          },
+          {
+            "id": "att_s10",
+            "name": "label",
+            "identifier": false,
+            "unique": false
+          }
+        ]
+      },
+      {
+        "id": "refreshToken",
+        "name": "RefreshToken",
+        "attributes": [
+          {
+            "id": "att_s11",
+            "name": "tokenHash",
+            "identifier": false,
+            "unique": true
+          },
+          {
+            "id": "att_s12",
+            "name": "issuedAt",
+            "identifier": false,
+            "unique": false
+          },
+          {
+            "id": "att_s13",
+            "name": "expiresAt",
+            "identifier": false,
+            "unique": false
+          },
+          {
+            "id": "att_s14",
+            "name": "revokedAt",
+            "identifier": false,
+            "unique": false
+          }
+        ]
+      },
+      {
+        "id": "club",
+        "name": "Club",
+        "attributes": [
+          {
+            "id": "att_s15",
+            "name": "name",
+            "identifier": false,
+            "unique": false
+          },
+          {
+            "id": "att_s16",
+            "name": "email",
+            "identifier": false,
+            "unique": true
+          },
+          {
+            "id": "att_s17",
+            "name": "phone",
+            "identifier": false,
+            "unique": false
+          }
+        ]
+      },
+      {
+        "id": "sport",
+        "name": "Sport",
+        "attributes": [
+          {
+            "id": "att_s18",
+            "name": "name",
+            "identifier": false,
+            "unique": false
+          }
+        ]
+      },
+      {
+        "id": "infrastructure",
+        "name": "Infrastructure",
+        "attributes": [
+          {
+            "id": "att_s19",
+            "name": "name",
+            "identifier": false,
+            "unique": false
+          },
+          {
+            "id": "att_s20",
+            "name": "capacity",
+            "identifier": false,
+            "unique": false
+          },
+          {
+            "id": "att_s21",
+            "name": "address",
+            "identifier": false,
+            "unique": false
+          }
+        ]
+      },
+      {
+        "id": "trainingSession",
+        "name": "TrainingSession",
+        "attributes": [
+          {
+            "id": "att_s22",
+            "name": "title",
+            "identifier": false,
+            "unique": false
+          },
+          {
+            "id": "att_s25",
+            "name": "capacity",
+            "identifier": false,
+            "unique": false
+          },
+          {
+            "id": "att_s23",
+            "name": "startAt",
+            "identifier": false,
+            "unique": false
+          },
+          {
+            "id": "att_s24",
+            "name": "endAt",
+            "identifier": false,
+            "unique": false
+          }
+        ]
+      },
+      {
+        "id": "equipment",
+        "name": "Equipment",
+        "attributes": [
+          {
+            "id": "att_s26",
+            "name": "name",
+            "identifier": false,
+            "unique": false
+          },
+          {
+            "id": "att_s27",
+            "name": "stockQuantity",
+            "identifier": false,
+            "unique": false
+          }
+        ]
+      }
+    ],
+    "associations": [
+      {
+        "id": "asc_holds",
+        "name": "holds",
+        "source": {
+          "classId": "appUser",
+          "cardinality": "0..n",
+          "role": ""
+        },
+        "target": {
+          "classId": "role",
+          "cardinality": "1..n",
+          "role": ""
+        },
+        "associationClass": {
+          "attributes": [
+            {
+              "id": "att_a968c906cc",
+              "name": "assignedAt",
+              "identifier": false,
+              "unique": false
+            }
+          ]
+        }
+      },
+      {
+        "id": "asc_owns",
+        "name": "owns",
+        "source": {
+          "classId": "appUser",
+          "cardinality": "1",
+          "role": ""
+        },
+        "target": {
+          "classId": "refreshToken",
+          "cardinality": "0..n",
+          "role": ""
+        },
+        "associationClass": null
+      },
+      {
+        "id": "asc_joins",
+        "name": "joins",
+        "source": {
+          "classId": "appUser",
+          "cardinality": "0..n",
+          "role": ""
+        },
+        "target": {
+          "classId": "club",
+          "cardinality": "0..n",
+          "role": ""
+        },
+        "associationClass": {
+          "attributes": [
+            {
+              "id": "att_s29",
+              "name": "joinedAt",
+              "identifier": false,
+              "unique": false
+            }
+          ]
+        }
+      },
+      {
+        "id": "asc_operates",
+        "name": "operates",
+        "source": {
+          "classId": "club",
+          "cardinality": "1",
+          "role": ""
+        },
+        "target": {
+          "classId": "infrastructure",
+          "cardinality": "0..n",
+          "role": ""
+        },
+        "associationClass": null
+      },
+      {
+        "id": "asc_organizes",
+        "name": "organizes",
+        "source": {
+          "classId": "club",
+          "cardinality": "1",
+          "role": ""
+        },
+        "target": {
+          "classId": "trainingSession",
+          "cardinality": "0..n",
+          "role": ""
+        },
+        "associationClass": null
+      },
+      {
+        "id": "asc_coaches",
+        "name": "coaches",
+        "source": {
+          "classId": "appUser",
+          "cardinality": "1",
+          "role": "trainer"
+        },
+        "target": {
+          "classId": "trainingSession",
+          "cardinality": "0..n",
+          "role": ""
+        },
+        "associationClass": null
+      },
+      {
+        "id": "asc_registers",
+        "name": "registers",
+        "source": {
+          "classId": "appUser",
+          "cardinality": "0..n",
+          "role": "participant"
+        },
+        "target": {
+          "classId": "trainingSession",
+          "cardinality": "0..n",
+          "role": ""
+        },
+        "associationClass": {
+          "attributes": [
+            {
+              "id": "att_s30",
+              "name": "status",
+              "identifier": false,
+              "unique": false
+            },
+            {
+              "id": "att_s31",
+              "name": "registeredAt",
+              "identifier": false,
+              "unique": false
+            },
+            {
+              "id": "att_s32",
+              "name": "cancelledAt",
+              "identifier": false,
+              "unique": false
+            }
+          ]
+        }
+      },
+      {
+        "id": "asc_takesPlace",
+        "name": "takesPlace",
+        "source": {
+          "classId": "trainingSession",
+          "cardinality": "0..n",
+          "role": ""
+        },
+        "target": {
+          "classId": "infrastructure",
+          "cardinality": "1",
+          "role": ""
+        },
+        "associationClass": null
+      },
+      {
+        "id": "asc_requires",
+        "name": "requires",
+        "source": {
+          "classId": "trainingSession",
+          "cardinality": "0..n",
+          "role": ""
+        },
+        "target": {
+          "classId": "equipment",
+          "cardinality": "0..n",
+          "role": ""
+        },
+        "associationClass": {
+          "attributes": [
+            {
+              "id": "att_s33",
+              "name": "quantity",
+              "identifier": false,
+              "unique": false
+            }
+          ]
+        }
+      },
+      {
+        "id": "asc_practises",
+        "name": "isDedicated",
+        "source": {
+          "classId": "trainingSession",
+          "cardinality": "0..n",
+          "role": ""
+        },
+        "target": {
+          "classId": "sport",
+          "cardinality": "1",
+          "role": ""
+        },
+        "associationClass": null
+      },
+      {
+        "id": "asc_suits",
+        "name": "suits",
+        "source": {
+          "classId": "infrastructure",
+          "cardinality": "0..n",
+          "role": ""
+        },
+        "target": {
+          "classId": "sport",
+          "cardinality": "1..n",
+          "role": ""
+        },
+        "associationClass": null
+      }
+    ]
+  },
+  "ldm": {
+    "tables": [
+      {
+        "id": "appUser",
+        "name": "AppUser",
+        "isAssociation": false,
+        "fields": [
+          {
+            "id": "appUser_pk",
+            "name": "pk_appUser",
+            "pk": true,
+            "fk": false,
+            "nullable": false,
+            "unique": false
+          },
+          {
+            "id": "att_s1",
+            "name": "email",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": true
+          },
+          {
+            "id": "att_s2",
+            "name": "passwordHash",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false
+          },
+          {
+            "id": "att_s3",
+            "name": "firstName",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false
+          },
+          {
+            "id": "att_s4",
+            "name": "lastName",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false
+          },
+          {
+            "id": "att_s5",
+            "name": "phone",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false
+          },
+          {
+            "id": "att_s6",
+            "name": "birthDate",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false
+          },
+          {
+            "id": "att_s7",
+            "name": "isActive",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false
+          },
+          {
+            "id": "att_s8",
+            "name": "createdAt",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false
+          }
+        ]
+      },
+      {
+        "id": "role",
+        "name": "Role",
+        "isAssociation": false,
+        "fields": [
+          {
+            "id": "att_s9",
+            "name": "pk_code",
+            "pk": true,
+            "fk": false,
+            "nullable": false,
+            "unique": false
+          },
+          {
+            "id": "att_s10",
+            "name": "label",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false
+          }
+        ]
+      },
+      {
+        "id": "refreshToken",
+        "name": "RefreshToken",
+        "isAssociation": false,
+        "fields": [
+          {
+            "id": "refreshToken_pk",
+            "name": "pk_refreshToken",
+            "pk": true,
+            "fk": false,
+            "nullable": false,
+            "unique": false
+          },
+          {
+            "id": "att_s11",
+            "name": "tokenHash",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false
+          },
+          {
+            "id": "att_s12",
+            "name": "issuedAt",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false
+          },
+          {
+            "id": "att_s13",
+            "name": "expiresAt",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false
+          },
+          {
+            "id": "att_s14",
+            "name": "revokedAt",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false
+          },
+          {
+            "id": "asc_owns_appUser_pk",
+            "name": "fk_appUser_owns",
+            "pk": false,
+            "fk": true,
+            "nullable": false,
+            "unique": false
+          }
+        ]
+      },
+      {
+        "id": "club",
+        "name": "Club",
+        "isAssociation": false,
+        "fields": [
+          {
+            "id": "club_pk",
+            "name": "pk_club",
+            "pk": true,
+            "fk": false,
+            "nullable": false,
+            "unique": false
+          },
+          {
+            "id": "att_s15",
+            "name": "name",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false
+          },
+          {
+            "id": "att_s16",
+            "name": "email",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false
+          },
+          {
+            "id": "att_s17",
+            "name": "phone",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false
+          }
+        ]
+      },
+      {
+        "id": "sport",
+        "name": "Sport",
+        "isAssociation": false,
+        "fields": [
+          {
+            "id": "sport_pk",
+            "name": "pk_sport",
+            "pk": true,
+            "fk": false,
+            "nullable": false,
+            "unique": false
+          },
+          {
+            "id": "att_s18",
+            "name": "name",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false
+          }
+        ]
+      },
+      {
+        "id": "infrastructure",
+        "name": "Infrastructure",
+        "isAssociation": false,
+        "fields": [
+          {
+            "id": "infrastructure_pk",
+            "name": "pk_infrastructure",
+            "pk": true,
+            "fk": false,
+            "nullable": false,
+            "unique": false
+          },
+          {
+            "id": "att_s19",
+            "name": "name",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false
+          },
+          {
+            "id": "att_s20",
+            "name": "capacity",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false
+          },
+          {
+            "id": "att_s21",
+            "name": "address",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false
+          },
+          {
+            "id": "asc_operates_club_pk",
+            "name": "fk_club_operates",
+            "pk": false,
+            "fk": true,
+            "nullable": false,
+            "unique": false
+          }
+        ]
+      },
+      {
+        "id": "trainingSession",
+        "name": "TrainingSession",
+        "isAssociation": false,
+        "fields": [
+          {
+            "id": "trainingSession_pk",
+            "name": "pk_trainingSession",
+            "pk": true,
+            "fk": false,
+            "nullable": false,
+            "unique": false
+          },
+          {
+            "id": "att_s22",
+            "name": "title",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false
+          },
+          {
+            "id": "att_s23",
+            "name": "startAt",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false
+          },
+          {
+            "id": "att_s24",
+            "name": "endAt",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false
+          },
+          {
+            "id": "att_s25",
+            "name": "capacity",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false
+          },
+          {
+            "id": "asc_organizes_club_pk",
+            "name": "fk_club_organizes",
+            "pk": false,
+            "fk": true,
+            "nullable": false,
+            "unique": false
+          },
+          {
+            "id": "asc_coaches_appUser_pk",
+            "name": "fk_appUser_coaches_trainer",
+            "pk": false,
+            "fk": true,
+            "nullable": false,
+            "unique": false
+          },
+          {
+            "id": "asc_takesPlace_infrastructure_pk",
+            "name": "fk_infrastructure_takesPlace",
+            "pk": false,
+            "fk": true,
+            "nullable": false,
+            "unique": false
+          },
+          {
+            "id": "asc_practises_sport_pk",
+            "name": "fk_sport_isDedicated",
+            "pk": false,
+            "fk": true,
+            "nullable": false,
+            "unique": false
+          }
+        ]
+      },
+      {
+        "id": "equipment",
+        "name": "Equipment",
+        "isAssociation": false,
+        "fields": [
+          {
+            "id": "equipment_pk",
+            "name": "pk_equipment",
+            "pk": true,
+            "fk": false,
+            "nullable": false,
+            "unique": false
+          },
+          {
+            "id": "att_s26",
+            "name": "name",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false
+          },
+          {
+            "id": "att_s27",
+            "name": "stockQuantity",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false
+          }
+        ]
+      },
+      {
+        "id": "asc_holds",
+        "name": "holds",
+        "isAssociation": true,
+        "fields": [
+          {
+            "id": "asc_holds_source_appUser_pk",
+            "name": "pkfk_appUser",
+            "pk": true,
+            "fk": true,
+            "nullable": false,
+            "unique": false
+          },
+          {
+            "id": "asc_holds_target_att_s9",
+            "name": "pkfk_role",
+            "pk": true,
+            "fk": true,
+            "nullable": false,
+            "unique": false
+          },
+          {
+            "id": "att_s28",
+            "name": "assignedAt",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false
+          }
+        ]
+      },
+      {
+        "id": "asc_joins",
+        "name": "joins",
+        "isAssociation": true,
+        "fields": [
+          {
+            "id": "asc_joins_source_appUser_pk",
+            "name": "pkfk_appUser",
+            "pk": true,
+            "fk": true,
+            "nullable": false,
+            "unique": false
+          },
+          {
+            "id": "asc_joins_target_club_pk",
+            "name": "pkfk_club",
+            "pk": true,
+            "fk": true,
+            "nullable": false,
+            "unique": false
+          },
+          {
+            "id": "att_s29",
+            "name": "joinedAt",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false
+          }
+        ]
+      },
+      {
+        "id": "asc_registers",
+        "name": "registers",
+        "isAssociation": true,
+        "fields": [
+          {
+            "id": "asc_registers_source_appUser_pk",
+            "name": "pkfk_appUser_participant",
+            "pk": true,
+            "fk": true,
+            "nullable": false,
+            "unique": false
+          },
+          {
+            "id": "asc_registers_target_trainingSession_pk",
+            "name": "pkfk_trainingSession",
+            "pk": true,
+            "fk": true,
+            "nullable": false,
+            "unique": false
+          },
+          {
+            "id": "att_s30",
+            "name": "status",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false
+          },
+          {
+            "id": "att_s31",
+            "name": "registeredAt",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false
+          },
+          {
+            "id": "att_s32",
+            "name": "cancelledAt",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false
+          }
+        ]
+      },
+      {
+        "id": "asc_requires",
+        "name": "requires",
+        "isAssociation": true,
+        "fields": [
+          {
+            "id": "asc_requires_source_trainingSession_pk",
+            "name": "pkfk_trainingSession",
+            "pk": true,
+            "fk": true,
+            "nullable": false,
+            "unique": false
+          },
+          {
+            "id": "asc_requires_target_equipment_pk",
+            "name": "pkfk_equipment",
+            "pk": true,
+            "fk": true,
+            "nullable": false,
+            "unique": false
+          },
+          {
+            "id": "att_s33",
+            "name": "quantity",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false
+          }
+        ]
+      },
+      {
+        "id": "asc_suits",
+        "name": "suits",
+        "isAssociation": true,
+        "fields": [
+          {
+            "id": "asc_suits_source_infrastructure_pk",
+            "name": "pkfk_infrastructure",
+            "pk": true,
+            "fk": true,
+            "nullable": false,
+            "unique": false
+          },
+          {
+            "id": "asc_suits_target_sport_pk",
+            "name": "pkfk_sport",
+            "pk": true,
+            "fk": true,
+            "nullable": false,
+            "unique": false
+          }
+        ]
+      }
+    ],
+    "links": [
+      {
+        "id": "asc_holds_source",
+        "name": "holds",
+        "role": "",
+        "fromTableId": "asc_holds",
+        "toTableId": "appUser",
+        "fromIds": [
+          "asc_holds_source_appUser_pk"
+        ],
+        "toIds": [
+          "appUser_pk"
+        ]
+      },
+      {
+        "id": "asc_holds_target",
+        "name": "holds",
+        "role": "",
+        "fromTableId": "asc_holds",
+        "toTableId": "role",
+        "fromIds": [
+          "asc_holds_target_att_s9"
+        ],
+        "toIds": [
+          "att_s9"
+        ]
+      },
+      {
+        "id": "asc_owns",
+        "name": "owns",
+        "role": "",
+        "fromTableId": "refreshToken",
+        "toTableId": "appUser",
+        "fromIds": [
+          "asc_owns_appUser_pk"
+        ],
+        "toIds": [
+          "appUser_pk"
+        ]
+      },
+      {
+        "id": "asc_joins_source",
+        "name": "joins",
+        "role": "",
+        "fromTableId": "asc_joins",
+        "toTableId": "appUser",
+        "fromIds": [
+          "asc_joins_source_appUser_pk"
+        ],
+        "toIds": [
+          "appUser_pk"
+        ]
+      },
+      {
+        "id": "asc_joins_target",
+        "name": "joins",
+        "role": "",
+        "fromTableId": "asc_joins",
+        "toTableId": "club",
+        "fromIds": [
+          "asc_joins_target_club_pk"
+        ],
+        "toIds": [
+          "club_pk"
+        ]
+      },
+      {
+        "id": "asc_operates",
+        "name": "operates",
+        "role": "",
+        "fromTableId": "infrastructure",
+        "toTableId": "club",
+        "fromIds": [
+          "asc_operates_club_pk"
+        ],
+        "toIds": [
+          "club_pk"
+        ]
+      },
+      {
+        "id": "asc_organizes",
+        "name": "organizes",
+        "role": "",
+        "fromTableId": "trainingSession",
+        "toTableId": "club",
+        "fromIds": [
+          "asc_organizes_club_pk"
+        ],
+        "toIds": [
+          "club_pk"
+        ]
+      },
+      {
+        "id": "asc_coaches",
+        "name": "coaches",
+        "role": "trainer",
+        "fromTableId": "trainingSession",
+        "toTableId": "appUser",
+        "fromIds": [
+          "asc_coaches_appUser_pk"
+        ],
+        "toIds": [
+          "appUser_pk"
+        ]
+      },
+      {
+        "id": "asc_registers_source",
+        "name": "registers",
+        "role": "participant",
+        "fromTableId": "asc_registers",
+        "toTableId": "appUser",
+        "fromIds": [
+          "asc_registers_source_appUser_pk"
+        ],
+        "toIds": [
+          "appUser_pk"
+        ]
+      },
+      {
+        "id": "asc_registers_target",
+        "name": "registers",
+        "role": "",
+        "fromTableId": "asc_registers",
+        "toTableId": "trainingSession",
+        "fromIds": [
+          "asc_registers_target_trainingSession_pk"
+        ],
+        "toIds": [
+          "trainingSession_pk"
+        ]
+      },
+      {
+        "id": "asc_takesPlace",
+        "name": "takesPlace",
+        "role": "",
+        "fromTableId": "trainingSession",
+        "toTableId": "infrastructure",
+        "fromIds": [
+          "asc_takesPlace_infrastructure_pk"
+        ],
+        "toIds": [
+          "infrastructure_pk"
+        ]
+      },
+      {
+        "id": "asc_requires_source",
+        "name": "requires",
+        "role": "",
+        "fromTableId": "asc_requires",
+        "toTableId": "trainingSession",
+        "fromIds": [
+          "asc_requires_source_trainingSession_pk"
+        ],
+        "toIds": [
+          "trainingSession_pk"
+        ]
+      },
+      {
+        "id": "asc_requires_target",
+        "name": "requires",
+        "role": "",
+        "fromTableId": "asc_requires",
+        "toTableId": "equipment",
+        "fromIds": [
+          "asc_requires_target_equipment_pk"
+        ],
+        "toIds": [
+          "equipment_pk"
+        ]
+      },
+      {
+        "id": "asc_practises",
+        "name": "isDedicated",
+        "role": "",
+        "fromTableId": "trainingSession",
+        "toTableId": "sport",
+        "fromIds": [
+          "asc_practises_sport_pk"
+        ],
+        "toIds": [
+          "sport_pk"
+        ]
+      },
+      {
+        "id": "asc_suits_source",
+        "name": "suits",
+        "role": "",
+        "fromTableId": "asc_suits",
+        "toTableId": "infrastructure",
+        "fromIds": [
+          "asc_suits_source_infrastructure_pk"
+        ],
+        "toIds": [
+          "infrastructure_pk"
+        ]
+      },
+      {
+        "id": "asc_suits_target",
+        "name": "suits",
+        "role": "",
+        "fromTableId": "asc_suits",
+        "toTableId": "sport",
+        "fromIds": [
+          "asc_suits_target_sport_pk"
+        ],
+        "toIds": [
+          "sport_pk"
+        ]
+      }
+    ]
+  },
+  "pdm": {
+    "tables": [
+      {
+        "id": "appUser",
+        "name": "AppUser",
+        "isAssociation": false,
+        "columns": [
+          {
+            "id": "appUser_pk",
+            "name": "pk_appUser",
+            "pk": true,
+            "fk": false,
+            "nullable": false,
+            "unique": false,
+            "type": "INT",
+            "autoIncrement": true
+          },
+          {
+            "id": "att_s1",
+            "name": "email",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": true,
+            "type": "VARCHAR(255)",
+            "autoIncrement": false
+          },
+          {
+            "id": "att_s2",
+            "name": "passwordHash",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false,
+            "type": "VARCHAR(255)",
+            "autoIncrement": false
+          },
+          {
+            "id": "att_s3",
+            "name": "firstName",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false,
+            "type": "VARCHAR(100)",
+            "autoIncrement": false
+          },
+          {
+            "id": "att_s4",
+            "name": "lastName",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false,
+            "type": "VARCHAR(100)",
+            "autoIncrement": false
+          },
+          {
+            "id": "att_s5",
+            "name": "phone",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false,
+            "type": "VARCHAR(30)",
+            "autoIncrement": false
+          },
+          {
+            "id": "att_s6",
+            "name": "birthDate",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false,
+            "type": "DATE",
+            "autoIncrement": false
+          },
+          {
+            "id": "att_s7",
+            "name": "isActive",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false,
+            "type": "BOOLEAN",
+            "autoIncrement": false
+          },
+          {
+            "id": "att_s8",
+            "name": "createdAt",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false,
+            "type": "DATETIME",
+            "autoIncrement": false
+          }
+        ],
+        "indexes": [
+          {
+            "id": "att_s1_idx",
+            "name": "idx_unique_email",
+            "type": "unique",
+            "columnIds": [
+              "att_s1"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "role",
+        "name": "Role",
+        "isAssociation": false,
+        "columns": [
+          {
+            "id": "att_s9",
+            "name": "pk_code",
+            "pk": true,
+            "fk": false,
+            "nullable": false,
+            "unique": false,
+            "type": "VARCHAR(20)",
+            "autoIncrement": false
+          },
+          {
+            "id": "att_s10",
+            "name": "label",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false,
+            "type": "VARCHAR(100)",
+            "autoIncrement": false
+          }
+        ],
+        "indexes": []
+      },
+      {
+        "id": "refreshToken",
+        "name": "RefreshToken",
+        "isAssociation": false,
+        "columns": [
+          {
+            "id": "refreshToken_pk",
+            "name": "pk_refreshToken",
+            "pk": true,
+            "fk": false,
+            "nullable": false,
+            "unique": false,
+            "type": "INT",
+            "autoIncrement": true
+          },
+          {
+            "id": "att_s11",
+            "name": "tokenHash",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false,
+            "type": "VARCHAR(255)",
+            "autoIncrement": false
+          },
+          {
+            "id": "att_s12",
+            "name": "issuedAt",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false,
+            "type": "DATETIME",
+            "autoIncrement": false
+          },
+          {
+            "id": "att_s13",
+            "name": "expiresAt",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false,
+            "type": "DATETIME",
+            "autoIncrement": false
+          },
+          {
+            "id": "att_s14",
+            "name": "revokedAt",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false,
+            "type": "DATETIME",
+            "autoIncrement": false
+          },
+          {
+            "id": "asc_owns_appUser_pk",
+            "name": "fk_appUser_owns",
+            "pk": false,
+            "fk": true,
+            "nullable": false,
+            "unique": false,
+            "type": "INT",
+            "autoIncrement": false
+          }
+        ],
+        "indexes": []
+      },
+      {
+        "id": "club",
+        "name": "Club",
+        "isAssociation": false,
+        "columns": [
+          {
+            "id": "club_pk",
+            "name": "pk_club",
+            "pk": true,
+            "fk": false,
+            "nullable": false,
+            "unique": false,
+            "type": "INT",
+            "autoIncrement": true
+          },
+          {
+            "id": "att_s15",
+            "name": "name",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false,
+            "type": "VARCHAR(100)",
+            "autoIncrement": false
+          },
+          {
+            "id": "att_s16",
+            "name": "email",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false,
+            "type": "VARCHAR(255)",
+            "autoIncrement": false
+          },
+          {
+            "id": "att_s17",
+            "name": "phone",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false,
+            "type": "VARCHAR(30)",
+            "autoIncrement": false
+          }
+        ],
+        "indexes": []
+      },
+      {
+        "id": "sport",
+        "name": "Sport",
+        "isAssociation": false,
+        "columns": [
+          {
+            "id": "sport_pk",
+            "name": "pk_sport",
+            "pk": true,
+            "fk": false,
+            "nullable": false,
+            "unique": false,
+            "type": "INT",
+            "autoIncrement": true
+          },
+          {
+            "id": "att_s18",
+            "name": "name",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false,
+            "type": "VARCHAR(100)",
+            "autoIncrement": false
+          }
+        ],
+        "indexes": []
+      },
+      {
+        "id": "infrastructure",
+        "name": "Infrastructure",
+        "isAssociation": false,
+        "columns": [
+          {
+            "id": "infrastructure_pk",
+            "name": "pk_infrastructure",
+            "pk": true,
+            "fk": false,
+            "nullable": false,
+            "unique": false,
+            "type": "INT",
+            "autoIncrement": true
+          },
+          {
+            "id": "att_s19",
+            "name": "name",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false,
+            "type": "VARCHAR(100)",
+            "autoIncrement": false
+          },
+          {
+            "id": "att_s20",
+            "name": "capacity",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false,
+            "type": "INT",
+            "autoIncrement": false
+          },
+          {
+            "id": "att_s21",
+            "name": "address",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false,
+            "type": "VARCHAR(100)",
+            "autoIncrement": false
+          },
+          {
+            "id": "asc_operates_club_pk",
+            "name": "fk_club_operates",
+            "pk": false,
+            "fk": true,
+            "nullable": false,
+            "unique": false,
+            "type": "INT",
+            "autoIncrement": false
+          }
+        ],
+        "indexes": []
+      },
+      {
+        "id": "trainingSession",
+        "name": "TrainingSession",
+        "isAssociation": false,
+        "columns": [
+          {
+            "id": "trainingSession_pk",
+            "name": "pk_trainingSession",
+            "pk": true,
+            "fk": false,
+            "nullable": false,
+            "unique": false,
+            "type": "INT",
+            "autoIncrement": true
+          },
+          {
+            "id": "att_s22",
+            "name": "title",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false,
+            "type": "VARCHAR(100)",
+            "autoIncrement": false
+          },
+          {
+            "id": "att_s23",
+            "name": "startAt",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false,
+            "type": "DATETIME",
+            "autoIncrement": false
+          },
+          {
+            "id": "att_s24",
+            "name": "endAt",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false,
+            "type": "DATETIME",
+            "autoIncrement": false
+          },
+          {
+            "id": "att_s25",
+            "name": "capacity",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false,
+            "type": "INT",
+            "autoIncrement": false
+          },
+          {
+            "id": "asc_organizes_club_pk",
+            "name": "fk_club_organizes",
+            "pk": false,
+            "fk": true,
+            "nullable": false,
+            "unique": false,
+            "type": "INT",
+            "autoIncrement": false
+          },
+          {
+            "id": "asc_coaches_appUser_pk",
+            "name": "fk_appUser_coaches_trainer",
+            "pk": false,
+            "fk": true,
+            "nullable": false,
+            "unique": false,
+            "type": "INT",
+            "autoIncrement": false
+          },
+          {
+            "id": "asc_takesPlace_infrastructure_pk",
+            "name": "fk_infrastructure_takesPlace",
+            "pk": false,
+            "fk": true,
+            "nullable": false,
+            "unique": false,
+            "type": "INT",
+            "autoIncrement": false
+          },
+          {
+            "id": "asc_practises_sport_pk",
+            "name": "fk_sport_isDedicated",
+            "pk": false,
+            "fk": true,
+            "nullable": false,
+            "unique": false,
+            "type": "INT",
+            "autoIncrement": false
+          }
+        ],
+        "indexes": []
+      },
+      {
+        "id": "equipment",
+        "name": "Equipment",
+        "isAssociation": false,
+        "columns": [
+          {
+            "id": "equipment_pk",
+            "name": "pk_equipment",
+            "pk": true,
+            "fk": false,
+            "nullable": false,
+            "unique": false,
+            "type": "INT",
+            "autoIncrement": true
+          },
+          {
+            "id": "att_s26",
+            "name": "name",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false,
+            "type": "VARCHAR(100)",
+            "autoIncrement": false
+          },
+          {
+            "id": "att_s27",
+            "name": "stockQuantity",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false,
+            "type": "INT",
+            "autoIncrement": false
+          }
+        ],
+        "indexes": []
+      },
+      {
+        "id": "asc_holds",
+        "name": "holds",
+        "isAssociation": true,
+        "columns": [
+          {
+            "id": "asc_holds_source_appUser_pk",
+            "name": "pkfk_appUser",
+            "pk": true,
+            "fk": true,
+            "nullable": false,
+            "unique": false,
+            "type": "INT",
+            "autoIncrement": false
+          },
+          {
+            "id": "asc_holds_target_att_s9",
+            "name": "pkfk_role",
+            "pk": true,
+            "fk": true,
+            "nullable": false,
+            "unique": false,
+            "type": "VARCHAR(20)",
+            "autoIncrement": false
+          },
+          {
+            "id": "att_s28",
+            "name": "assignedAt",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false,
+            "type": "DATETIME",
+            "autoIncrement": false
+          }
+        ],
+        "indexes": []
+      },
+      {
+        "id": "asc_joins",
+        "name": "joins",
+        "isAssociation": true,
+        "columns": [
+          {
+            "id": "asc_joins_source_appUser_pk",
+            "name": "pkfk_appUser",
+            "pk": true,
+            "fk": true,
+            "nullable": false,
+            "unique": false,
+            "type": "INT",
+            "autoIncrement": false
+          },
+          {
+            "id": "asc_joins_target_club_pk",
+            "name": "pkfk_club",
+            "pk": true,
+            "fk": true,
+            "nullable": false,
+            "unique": false,
+            "type": "INT",
+            "autoIncrement": false
+          },
+          {
+            "id": "att_s29",
+            "name": "joinedAt",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false,
+            "type": "DATETIME",
+            "autoIncrement": false
+          }
+        ],
+        "indexes": []
+      },
+      {
+        "id": "asc_registers",
+        "name": "registers",
+        "isAssociation": true,
+        "columns": [
+          {
+            "id": "asc_registers_source_appUser_pk",
+            "name": "pkfk_appUser_participant",
+            "pk": true,
+            "fk": true,
+            "nullable": false,
+            "unique": false,
+            "type": "INT",
+            "autoIncrement": false
+          },
+          {
+            "id": "asc_registers_target_trainingSession_pk",
+            "name": "pkfk_trainingSession",
+            "pk": true,
+            "fk": true,
+            "nullable": false,
+            "unique": false,
+            "type": "INT",
+            "autoIncrement": false
+          },
+          {
+            "id": "att_s30",
+            "name": "status",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false,
+            "type": "VARCHAR(30)",
+            "autoIncrement": false
+          },
+          {
+            "id": "att_s31",
+            "name": "registeredAt",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false,
+            "type": "DATETIME",
+            "autoIncrement": false
+          },
+          {
+            "id": "att_s32",
+            "name": "cancelledAt",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false,
+            "type": "DATETIME",
+            "autoIncrement": false
+          }
+        ],
+        "indexes": []
+      },
+      {
+        "id": "asc_requires",
+        "name": "requires",
+        "isAssociation": true,
+        "columns": [
+          {
+            "id": "asc_requires_source_trainingSession_pk",
+            "name": "pkfk_trainingSession",
+            "pk": true,
+            "fk": true,
+            "nullable": false,
+            "unique": false,
+            "type": "INT",
+            "autoIncrement": false
+          },
+          {
+            "id": "asc_requires_target_equipment_pk",
+            "name": "pkfk_equipment",
+            "pk": true,
+            "fk": true,
+            "nullable": false,
+            "unique": false,
+            "type": "INT",
+            "autoIncrement": false
+          },
+          {
+            "id": "att_s33",
+            "name": "quantity",
+            "pk": false,
+            "fk": false,
+            "nullable": true,
+            "unique": false,
+            "type": "INT",
+            "autoIncrement": false
+          }
+        ],
+        "indexes": []
+      },
+      {
+        "id": "asc_suits",
+        "name": "suits",
+        "isAssociation": true,
+        "columns": [
+          {
+            "id": "asc_suits_source_infrastructure_pk",
+            "name": "pkfk_infrastructure",
+            "pk": true,
+            "fk": true,
+            "nullable": false,
+            "unique": false,
+            "type": "INT",
+            "autoIncrement": false
+          },
+          {
+            "id": "asc_suits_target_sport_pk",
+            "name": "pkfk_sport",
+            "pk": true,
+            "fk": true,
+            "nullable": false,
+            "unique": false,
+            "type": "INT",
+            "autoIncrement": false
+          }
+        ],
+        "indexes": []
+      }
+    ],
+    "constraints": [
+      {
+        "id": "asc_holds_source",
+        "name": "fkc_holds_AppUser",
+        "role": "",
+        "fromTableId": "asc_holds",
+        "toTableId": "appUser",
+        "fromIds": [
+          "asc_holds_source_appUser_pk"
+        ],
+        "toIds": [
+          "appUser_pk"
+        ],
+        "verb": "holds",
+        "onDelete": "CASCADE",
+        "onUpdate": "CASCADE"
+      },
+      {
+        "id": "asc_holds_target",
+        "name": "fkc_holds_Role",
+        "role": "",
+        "fromTableId": "asc_holds",
+        "toTableId": "role",
+        "fromIds": [
+          "asc_holds_target_att_s9"
+        ],
+        "toIds": [
+          "att_s9"
+        ],
+        "verb": "holds",
+        "onDelete": "CASCADE",
+        "onUpdate": "CASCADE"
+      },
+      {
+        "id": "asc_owns",
+        "name": "fkc_RefreshToken_owns_AppUser",
+        "role": "",
+        "fromTableId": "refreshToken",
+        "toTableId": "appUser",
+        "fromIds": [
+          "asc_owns_appUser_pk"
+        ],
+        "toIds": [
+          "appUser_pk"
+        ],
+        "verb": "owns",
+        "onDelete": "RESTRICT",
+        "onUpdate": "CASCADE"
+      },
+      {
+        "id": "asc_joins_source",
+        "name": "fkc_joins_AppUser",
+        "role": "",
+        "fromTableId": "asc_joins",
+        "toTableId": "appUser",
+        "fromIds": [
+          "asc_joins_source_appUser_pk"
+        ],
+        "toIds": [
+          "appUser_pk"
+        ],
+        "verb": "joins",
+        "onDelete": "CASCADE",
+        "onUpdate": "CASCADE"
+      },
+      {
+        "id": "asc_joins_target",
+        "name": "fkc_joins_Club",
+        "role": "",
+        "fromTableId": "asc_joins",
+        "toTableId": "club",
+        "fromIds": [
+          "asc_joins_target_club_pk"
+        ],
+        "toIds": [
+          "club_pk"
+        ],
+        "verb": "joins",
+        "onDelete": "CASCADE",
+        "onUpdate": "CASCADE"
+      },
+      {
+        "id": "asc_operates",
+        "name": "fkc_Infrastructure_operates_Club",
+        "role": "",
+        "fromTableId": "infrastructure",
+        "toTableId": "club",
+        "fromIds": [
+          "asc_operates_club_pk"
+        ],
+        "toIds": [
+          "club_pk"
+        ],
+        "verb": "operates",
+        "onDelete": "RESTRICT",
+        "onUpdate": "CASCADE"
+      },
+      {
+        "id": "asc_organizes",
+        "name": "fkc_TrainingSession_organizes_Club",
+        "role": "",
+        "fromTableId": "trainingSession",
+        "toTableId": "club",
+        "fromIds": [
+          "asc_organizes_club_pk"
+        ],
+        "toIds": [
+          "club_pk"
+        ],
+        "verb": "organizes",
+        "onDelete": "RESTRICT",
+        "onUpdate": "CASCADE"
+      },
+      {
+        "id": "asc_coaches",
+        "name": "fkc_TrainingSession_coaches_AppUser_trainer",
+        "role": "trainer",
+        "fromTableId": "trainingSession",
+        "toTableId": "appUser",
+        "fromIds": [
+          "asc_coaches_appUser_pk"
+        ],
+        "toIds": [
+          "appUser_pk"
+        ],
+        "verb": "coaches",
+        "onDelete": "RESTRICT",
+        "onUpdate": "CASCADE"
+      },
+      {
+        "id": "asc_registers_source",
+        "name": "fkc_registers_AppUser_participant",
+        "role": "participant",
+        "fromTableId": "asc_registers",
+        "toTableId": "appUser",
+        "fromIds": [
+          "asc_registers_source_appUser_pk"
+        ],
+        "toIds": [
+          "appUser_pk"
+        ],
+        "verb": "registers",
+        "onDelete": "CASCADE",
+        "onUpdate": "CASCADE"
+      },
+      {
+        "id": "asc_registers_target",
+        "name": "fkc_registers_TrainingSession",
+        "role": "",
+        "fromTableId": "asc_registers",
+        "toTableId": "trainingSession",
+        "fromIds": [
+          "asc_registers_target_trainingSession_pk"
+        ],
+        "toIds": [
+          "trainingSession_pk"
+        ],
+        "verb": "registers",
+        "onDelete": "CASCADE",
+        "onUpdate": "CASCADE"
+      },
+      {
+        "id": "asc_takesPlace",
+        "name": "fkc_TrainingSession_takesPlace_Infrastructure",
+        "role": "",
+        "fromTableId": "trainingSession",
+        "toTableId": "infrastructure",
+        "fromIds": [
+          "asc_takesPlace_infrastructure_pk"
+        ],
+        "toIds": [
+          "infrastructure_pk"
+        ],
+        "verb": "takesPlace",
+        "onDelete": "RESTRICT",
+        "onUpdate": "CASCADE"
+      },
+      {
+        "id": "asc_requires_source",
+        "name": "fkc_requires_TrainingSession",
+        "role": "",
+        "fromTableId": "asc_requires",
+        "toTableId": "trainingSession",
+        "fromIds": [
+          "asc_requires_source_trainingSession_pk"
+        ],
+        "toIds": [
+          "trainingSession_pk"
+        ],
+        "verb": "requires",
+        "onDelete": "CASCADE",
+        "onUpdate": "CASCADE"
+      },
+      {
+        "id": "asc_requires_target",
+        "name": "fkc_requires_Equipment",
+        "role": "",
+        "fromTableId": "asc_requires",
+        "toTableId": "equipment",
+        "fromIds": [
+          "asc_requires_target_equipment_pk"
+        ],
+        "toIds": [
+          "equipment_pk"
+        ],
+        "verb": "requires",
+        "onDelete": "CASCADE",
+        "onUpdate": "CASCADE"
+      },
+      {
+        "id": "asc_practises",
+        "name": "fkc_TrainingSession_isDedicated_Sport",
+        "role": "",
+        "fromTableId": "trainingSession",
+        "toTableId": "sport",
+        "fromIds": [
+          "asc_practises_sport_pk"
+        ],
+        "toIds": [
+          "sport_pk"
+        ],
+        "verb": "isDedicated",
+        "onDelete": "RESTRICT",
+        "onUpdate": "CASCADE"
+      },
+      {
+        "id": "asc_suits_source",
+        "name": "fkc_suits_Infrastructure",
+        "role": "",
+        "fromTableId": "asc_suits",
+        "toTableId": "infrastructure",
+        "fromIds": [
+          "asc_suits_source_infrastructure_pk"
+        ],
+        "toIds": [
+          "infrastructure_pk"
+        ],
+        "verb": "suits",
+        "onDelete": "CASCADE",
+        "onUpdate": "CASCADE"
+      },
+      {
+        "id": "asc_suits_target",
+        "name": "fkc_suits_Sport",
+        "role": "",
+        "fromTableId": "asc_suits",
+        "toTableId": "sport",
+        "fromIds": [
+          "asc_suits_target_sport_pk"
+        ],
+        "toIds": [
+          "sport_pk"
+        ],
+        "verb": "suits",
+        "onDelete": "CASCADE",
+        "onUpdate": "CASCADE"
+      }
+    ]
+  }
+}
